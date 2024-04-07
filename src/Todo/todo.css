@@ -1,0 +1,36 @@
+ul {
+    display: flex;
+    justify-content: center;
+
+    list-style-type: none;
+}
+
+ul >li {
+    margin: 5px;
+    padding: 5px;
+}
+
+ul > button {
+    margin: 5px;
+}
+
+ul > .edit {
+    color: rgb(243, 243, 243);
+    background-color: green;
+    border-radius: 3px;
+}
+ul > .delete {
+    color: rgb(243, 243, 243);
+    background-color: rgb(194, 41, 2);
+    border-radius: 3px;
+}
+/* 
+:enabled {
+    color: rgb(243, 243, 243);
+    background-color: rgb(194, 41, 2);
+    border-radius: 3px;
+}
+
+:disabled {
+    color: gray;
+} */
