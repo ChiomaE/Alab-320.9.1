@@ -5,9 +5,9 @@ import './todo.css'
 export default function TodoButtons({todo, dispatch}) {
     const [isBtnDisabled, setBtnDisable] = useState(true);
 
-    //Enables button when checkbox is checked
-    function enableBtn() {
-        setBtnDisable(false)
+    //Enables delete button when checkbox is checked
+    function enableBtn(e) {
+        setBtnDisable(!e.target.checked)
         console.log("Button enabled!")
     }
   /*   const disableBtn = () => {
