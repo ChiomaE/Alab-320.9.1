@@ -5,6 +5,21 @@ import './todo.css'
 export default function TodoButtons({todo, dispatch}) {
     const [isBtnDisabled, setBtnDisable] = useState(true);
 
+    const styles = {
+        disabled: {
+            color: 'gray',
+            cursor: 'not-allowed',
+            opacity: 0.5,
+        },
+
+        enabled: {
+            color: 'rgb(243, 243, 243)',
+            backgroundColor: 'rgb(194, 41, 2)',
+            borderRadius: '3px',
+            
+        } 
+    }
+
     //Enables delete button when checkbox is checked
     function enableBtn(e) {
         setBtnDisable(!e.target.checked)
@@ -27,7 +42,7 @@ export default function TodoButtons({todo, dispatch}) {
                     Edit
             </button>
 
-            <button className="delete" disabled={isBtnDisabled} onClick={() => dispatch(
+            <button className="delete" disabled={isBtnDisabled} style={!isBtnDisabled ? styles.disabled : styles.enabled} onClick={() => dispatch(
                 {type: actions.DELETE_TODO, payload: {id: todo.id}})}>Delete</button>
         </ul>
     )

@@ -18,19 +18,16 @@ ul > .edit {
     color: rgb(243, 243, 243);
     background-color: green;
     border-radius: 3px;
+    cursor: pointer;
 }
 ul > .delete {
     color: rgb(243, 243, 243);
     background-color: rgb(194, 41, 2);
     border-radius: 3px;
 }
-/* 
-:enabled {
+
+.delete:enabled {
     color: rgb(243, 243, 243);
     background-color: rgb(194, 41, 2);
     border-radius: 3px;
 }
-
-:disabled {
-    color: gray;
-} */
